@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ysabeau:wght@500;800;1000&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bootstrap-css/bootstrap.css">
+  <title>Code Crusaders | Game Developer Company</title>
+  <style>
+/* =================================================================== */
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Ysabeau;
+  color: black;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  width: 100%;
+  min-height: 200vh;
+  background-image: linear-gradient(to right top, #bc00ff -10%, #3a0070);
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+h6 {
+  font-weight: 700;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, .9);
+  line-height: 0px;
+  zoom: 1.5;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 3px;
+  width: 90px;
+  border: none;
+  background-color: #2e315e;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+
+/* =================================================================== */
+/* HEADER VIEW*/
+
+header {
+  background-image: linear-gradient(to right top, #1c1f72 -20%, #00034d);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  width: 120px;
+}
+
+/* =================================================================== */
+/* FOOTER VIEW*/
+
+footer {
+  background-image: linear-gradient(to right top, #1c1f72 -20%, #00034d);
+  height: 150px;
+  position: sticky;
+  top: 100%; 
+  bottom: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =================================================================== */
+/* MAIN VIEW*/
+
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-left: 13%;
+  margin-right: 13%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: auto;
+}
+
+/* =================================================================== */
+/* GAME MOBILE VIEW */
+
+.game-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.game {
+  background-color: #6e74cc;
+  border-style: solid;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  height: 580px;
+  width: 350px;
+  transition: 100ms;
+  position: relative;
+}
+
+.game:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+
+.game-image {
+  height: 350px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.game div h3,
+.game div p {
+  margin: 9px;
+}
+
+.game div p {
+  color: rgb(219, 219, 219);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.download-button {
+  background-color: #2e315e;
+  color: white;
+  transition: 75ms;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.download-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.download-button:active {
+  background-color: lightgreen;
+  box-shadow: 0px 0px 5px rgba(144, 238, 144, 0.5);
+  color: black;
+  transform: scale(0.95);
+}
+
+/* GAME DESKTOP/TABLET VIEW */
+
+@media only screen and (min-width: 768px) {
+  .game-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  .game-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .game-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header id="home">
+    <a href="main.html">
+      <img src="../img/cc-logo.png">
+    </a>
+  </header>
+  
+  <h1 style="text-align: center; margin-top: 10px;">ANDROID GAMES</h1>
+
+  <main>
+    <div class="game-container">
+
+
+      <div class="game">
+        <div>
+          <img class="game-image" src="../img/android-1.jpg">
+        </div>
+        <div>
+          <h3>Warlord Arena</h3>
+          <p>Survival io of heroes evolving to survive!
+
+            From strong orcs, noble elves, to legendary wizards
+            Various races in the fantasy world start a war to determine the ultimate victor.
+            
+            If you can't avoid it, use a craft to subdue your opponent.
+            If you survive the fierce battle to the end, victory is yours.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://play.google.com/store/games?device=windows">
+            <button class="download-button">Download</button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="game">
+        <div>
+          <img class="game-image" src="../img/android-2.jpg">
+        </div>
+        <div>
+          <h3>Merge Neverland</h3>
+          <p>One day, Samantha and her cat Loki were swirled into a magic book in which many supernatural creatures lived and thrived. This fascinating place was once a paradise, but why is it now deathly stillness? What has happened here? What secret is Loki hiding? You need to find it out with Samantha!</p>
+        </div>
+        <div class="button-container">
+          <a href="https://play.google.com/store/games?device=windows">
+            <button class="download-button">Download</button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="game">
+        <div>
+          <img class="game-image" src="../img/android-3.jpg">
+        </div>
+        <div>
+          <h3>Goblin Dungeon: Idle</h3>
+          <p>The magic dungeon is in danger! Pike up your sword, summon monster heroes, and protect the last underground kingdom! Use your black magic, defeat royal troops in epic battles, and lead your monster army to glory! he battle is simple but addictive. You can swipe to kill monsters, and challenge level bosses.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://play.google.com/store/games?device=windows">
+            <button class="download-button">Download</button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="game">
+        <div>
+          <img class="game-image" src="../img/android-4.jpg">
+        </div>
+        <div>
+          <h3>Yeager: Hunter Legend</h3>
+          <p>You take on the role of Yeager, an elite Vyderan hunter sent to retrieve a priceless stolen relic. Your mission will take you around the mysterious Planet Ekors, a world of deadly creatures and dark secrets. Hunt ferocious beasts and encounter alien civilizations as you uncover the hidden secrets.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://play.google.com/store/games?device=windows">
+            <button class="download-button">Download</button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="game">
+        <div>
+          <img class="game-image" src="../img/android-5.png">
+        </div>
+        <div>
+          <h3>Zombeast: Zombie Shooter</h3>
+          <p>Exciting campaign offers you to survive in the cruel world of the zombie apocalypse. Each day can be your last day, so you must use all of your skills in order to stay alive, hunt target in a bloody gore action of this FPS game.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://play.google.com/store/games?device=windows">
+            <button class="download-button">Download</button>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="game">
+        <div>
+          <img class="game-image" src="../img/android-6.png">
+        </div>
+        <div>
+          <h3>Hero Wars – Fantasy Battles</h3>
+          <p>Unlock skills and battle enemies with Hero Wars, the roleplaying online fantasy game. Fight enemies, Archdemon and his evil army, in epic PvP arena battles, and collect the powerful heroes in Dominion along the way.</p>
+        </div>
+        <div class="button-container">
+          <a href="https://play.google.com/store/games?device=windows">
+            <button class="download-button">Download</button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <h5 style="color: white">HAO SANTOS - MINI PROJECT 1, BATCH WD60P KODEGO  </h3>
+  </footer>
+
+
+  <script src="../bootstrap-js/bootstrap.bundle.js"></script>
+</body>
+</html>

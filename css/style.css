@@ -1,0 +1,435 @@
+/* =================================================================== */
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Ysabeau;
+  color: black;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  width: 100%;
+  background-image: linear-gradient(to right top, #bc00ff -10%, #3a0070);
+}
+
+p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.3);
+}
+
+h6 {
+  font-weight: 700;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, .9);
+  line-height: 0px;
+  zoom: 1.5;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 3px;
+  width: 90px;
+  border: none;
+  background-color: #2e315e;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+.header-button-container div button:hover,
+.left-button-container button:hover,
+.right-button-container button:hover,
+.middle-button-container button:hover {
+  transition: 90ms;
+}
+
+.header-button-container div button:hover,
+.left-button-container button:hover,
+.right-button-container button:hover,
+.middle-button-container button:hover {
+  background-color: rgb(0, 63, 0);
+  transform: scale(1.02);
+}
+
+.header-button-container div button:active,
+.left-button-container button:active,
+.right-button-container button:active,
+.middle-button-container button:active {
+  background-color: rgb(213, 255, 150);
+  box-shadow: 0px 0px 12px rgba(152, 245, 152, 0.8);
+  transform: scale(0.95);
+}
+
+.header-button-container div button:active a,
+.left-button-container button:active a,
+.right-button-container button:active a,
+.middle-button-container button:active a {
+  color: white;
+}
+
+/* =================================================================== */
+/* NAVIGATION MOBILE VIEW */
+
+
+.left-button-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 3%;
+  bottom: 15%;
+  z-index: 100;
+}
+
+.left-button-container button:nth-child(1) {
+  border-radius: 20px 0px 0px 0px;
+}
+
+.left-button-container button:nth-child(2) {
+  border-radius: 0px 0px 0px 20px;
+}
+
+.right-button-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 3%;
+  bottom: 15%;
+  z-index: 100;
+}
+
+.right-button-container button:nth-child(1) {
+  border-radius: 0px 20px 0px 0px;
+}
+
+.right-button-container button:nth-child(2) {
+  border-radius: 0px 0px 20px 0px;
+}
+
+.middle-button-container {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 5%;
+  gap: 3px;
+  z-index: 100;
+}
+
+.middle-button-container button:nth-child(1) {
+  border-radius: 24px 0px 0px 24px;
+}
+
+.middle-button-container button:nth-child(3) {
+  border-radius: 0px 24px 24px 0px;
+}
+
+.button-border {
+  height: 25vh;
+  width: 100%;
+  background-image: linear-gradient(to right top, #1c1f72 -20%, #00034d);
+  position: fixed;
+  bottom: 0;
+  z-index: 91;
+}
+
+.bump {
+  height: 25vh;
+  width: 100%;
+  background-color: black;
+}
+
+/* =================================================================== */
+/* NAVIGATION DESKTOP VIEW */
+
+@media only screen and (min-width: 775px) {
+  .left-button-container button,
+  .right-button-container button,
+  .middle-button-container button,
+  .button-border,
+  .bump {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .button-border {
+    height: 35vh;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .middle-button-container {
+    bottom: 1vh;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .left-button-container,
+  .right-button-container {
+    bottom: 18vh;
+  }
+}
+
+@media only screen and (max-height: 300px) {
+  .button-border {
+    height: 100vh;
+  }
+}
+
+/* =================================================================== */
+/* HEADER MOBILE VIEW */
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: lightblue; */
+}
+
+header div img {
+  width: 120px;
+}
+
+.header-button-container,
+.header-button-container div,
+.header-button-container div button {
+  /* background-color: lightcoral; */
+  display: none;
+}
+
+
+
+/* HEADER DESKTOP VIEW */
+
+@media only screen and (min-width: 775px) {
+  
+  header {
+    position: fixed;
+    z-index: 100;
+    background-image: linear-gradient(to right top, #1c1f72 -20%, #00034d)
+  }
+
+  .logo-container {
+    margin-right: 25%;
+  }
+
+  .header-button-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-button-container div {
+    display: flex;
+  }
+
+  .header-button-container div button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    margin: 2px;
+    border-style: none;
+    border-radius: 5px;
+  }
+
+  
+}
+
+/* =================================================================== */
+/* ACCORDION FOR MOBILE VIEW */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.accordion-item {
+  width: 90vw;
+}
+
+#game-button-first {
+  background-image: url("../img/ff7-cloud-acr2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  padding: none;
+  text-align: left;
+  background-position: 90% 0%;
+  
+}
+
+#game-button-second {
+  background-image: url("../img/the-witcher-3-geralt-acr.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  background-position: 80% 0%;
+  padding: none;
+  text-align: center;
+}
+
+#game-button-third {
+  background-image: url("../img/re4-ada-acr.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+  background-position: 90% 0%;
+  padding: none;
+  text-align: center;
+}
+
+
+.box-art {
+  width: 100%;
+}
+
+
+/* =================================================================== */
+/* MAIN MOBILE VIEW */
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+.image-container img {
+  height: 18vh;
+  width: 90vw;
+  object-fit: cover;
+  object-position: 0px 0%;
+}
+
+/* MAIN DESKTOP VIEW */
+
+@media only screen and (min-width: 775px) {
+  .image-container img {
+    margin-top: 150px;
+    height: 30vh;
+    width: 80vw;
+    object-fit: cover;
+    object-position: 0px 0%;
+  }
+  .image-container p {
+    width: 80vw;
+  }
+}
+
+/* =================================================================== */
+/* CAROUSEL MOBILE VIEW */
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0vh 4vw 2vh 4vw;
+}
+
+/* CAROUSEL DESKTOP VIEW */
+
+@media only screen and (min-width: 775px) {
+  .slide {
+    margin: 0vh 9vw 2vh 9vw;
+  }
+}
+
+
+/* =================================================================== */
+/* ABOUT US MOBILE VIEW */
+
+#about-us {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
+#about-us img {
+  width: 90vw;
+}
+
+/* ABOUT US DESKTOP VIEW */
+
+@media only screen and (min-width: 775px) {
+  #about-us {
+    margin-left: 9vw;
+    margin-right: 9vw;
+  }
+
+  #about-us img {
+    width: 80vw;
+  }
+}
+
+
+
+/* =================================================================== */
+/* FOOTER MOBILE VIEW */
+
+#contact-us {
+  background-color: #3a0070;
+  padding: 10px 10px 50px 10px;
+  position: relative;
+  bottom: 0px;
+  z-index: 50;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-left: 10%;
+}
+
+#contact-us div div a,
+#contact-us div div h5,
+#contact-us div {
+  color: rgb(170, 170, 170);
+}
+
+#contact-us div div h5 {
+  color: rgb(87, 87, 87);
+}
+
+/* =================================================================== */
+/* FOOTER MOBILE VIEW */
+
+@media only screen and (min-width: 465px) {
+  #contact-us {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media only screen and (min-width: 775px) {
+  #contact-us {
+    padding-left: 8vw;
+    padding-right: 8vw;
+    
+  }
+}

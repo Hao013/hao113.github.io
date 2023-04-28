@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../bootstrap-css/bootstrap.css">
+  <title>Document</title>
+</head>
+  <style>
+
+    form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            margin: 1vh 5vw 0vh 5vw;
+    }
+
+    form div {
+      display: flex;
+      gap: 5px;
+    }    
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 42vw;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="email"] {
+      width: 80vw;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="tel"] {
+      width: 50vw;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+
+    input[type="submit"] {
+      background-color: #42459a;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 90px;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2e315e;
+    }
+
+  </style>
+<body>
+
+  <form>
+
+  <div>
+    <label>
+      <p>First Name</p>
+      <input class="iname" type="text" name="firstName" placeholder="Enter First Name" required>
+    </label>
+    <label>
+      <p>Last Name</p>
+      <input class="iname" type="text" name="lastName" placeholder="Enter Last Name" required>
+    </label>
+  </div>
+
+  <div>
+    <label>
+      <p>Email</p>
+      <input type="email" name="email" placeholder="Enter Email" required>
+    </label> 
+  </div>
+
+  <div>
+    <label>
+      <p>Phone</p>
+      <input type="tel" name="phoneNumber" pattern="[0-9]+" placeholder="Enter Phone Number" required>
+    </label>   
+  </div>
+
+  <textarea rows="4" cols="50" placeholder=" Leave Message"></textarea>
+    
+
+  <input type="submit" value="Send">
+
+  </form>
+  
+
+  
+  <script src="../bootstrap-js/bootstrap.bundle.js"></script>
+</body>
+</html>
